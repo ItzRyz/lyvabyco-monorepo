@@ -20,7 +20,7 @@ This ecosystem centralizes all components into a single repository to maximize c
 
 ### 📐 Architecture Diagram
 
-::: mermaid
+``` mermaid
 graph TD
     %% Users
     User([User / Browser])
@@ -60,7 +60,7 @@ graph TD
     style DB fill:#111827,stroke:#374151,stroke-width:2px,color:#fff
     style Xendit fill:#7c2d12,stroke:#f97316,stroke-width:2px,color:#fff
     style Logistics fill:#7c2d12,stroke:#f97316,stroke-width:2px,color:#fff
-:::
+```
 
 ---
 
