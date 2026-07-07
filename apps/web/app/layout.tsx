@@ -4,12 +4,11 @@ import "@workspace/ui/globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { cn } from "@workspace/ui/lib/utils";
 
+const figtreeHeading = Figtree({subsets:['latin'],variable:'--font-heading'});
+
 const figtree = Figtree({subsets:['latin'],variable:'--font-sans'})
 
-const fontMono = Geist_Mono({
-  subsets: ["latin"],
-  variable: "--font-mono",
-})
+const geistMono = Geist_Mono({subsets:['latin'],variable:'--font-mono'})
 
 export default function RootLayout({
   children,
@@ -20,7 +19,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={cn("antialiased", fontMono.variable, "font-sans", figtree.variable)}
+      className={cn("antialiased", figtree.variable, "font-mono", geistMono.variable, figtreeHeading.variable)}
     >
       <body>
         <ThemeProvider>{children}</ThemeProvider>
