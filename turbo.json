@@ -7,6 +7,7 @@
   "tasks": {
     "build": {
       "dependsOn": [
+        "^db:generate",
         "^build"
       ],
       "inputs": [
@@ -14,6 +15,7 @@
         ".env*"
       ],
       "outputs": [
+        "dist/**",
         ".next/**",
         "!.next/cache/**"
       ]
