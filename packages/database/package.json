@@ -1,6 +1,7 @@
 {
     "name": "@repo/db",
     "version": "0.0.0",
+    "type": "module",
     "main": "./src/index.mjs",
     "types": "./src/index.d.ts",
     "exports": {

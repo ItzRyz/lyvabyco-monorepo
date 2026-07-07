@@ -1,3 +1,4 @@
-import dbClient from './client.js';
+import { prisma } from './client.mjs';
 
-export const prisma = dbClient.prisma;
+export { prisma };
+export default prisma;
