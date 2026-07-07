@@ -1,13 +1,13 @@
 {
     "name": "@repo/db",
     "version": "0.0.0",
-    "main": "./src/index.js",
+    "main": "./src/index.mjs",
     "types": "./src/index.d.ts",
     "exports": {
         ".": {
             "types": "./src/index.d.ts",
-            "import": "./src/index.js",
-            "default": "./src/index.js"
+            "import": "./src/index.mjs",
+            "default": "./src/index.mjs"
         }
     },
     "scripts": {
