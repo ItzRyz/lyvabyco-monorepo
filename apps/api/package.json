@@ -10,7 +10,7 @@
     },
     "dependencies": {
         "@repo/db": "workspace:*",
-        "better-auth": "^1.0.0",
+        "better-auth": "^1.6.23",
         "cookie-parser": "^1.4.6",
         "cors": "^2.8.5",
         "express": "^4.19.2"
