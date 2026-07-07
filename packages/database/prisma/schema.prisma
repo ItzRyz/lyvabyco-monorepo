@@ -76,9 +76,50 @@ model Role {
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 
-  users User[]
+  users           User[]
+  rolePermissions RolePermission[]
 
   @@map("roles")
+}
+
+model Menu {
+  id      String  @id @default(uuid())
+  titleId String // Nama menu Bahasa Indonesia (e.g., "Manajemen Stok")
+  titleEn String // Nama menu Bahasa Inggris (e.g., "Stock Management")
+  path    String  @unique // Rute URL Next.js (e.g., "/admin/inventory")
+  icon    String? // Nama key ikon Lucide/Shadcn (e.g., "Boxes")
+  order   Int     @default(0) // Urutan tampilan menu di sidebar
+
+  // Self-relation untuk Sub-Menu (Parent-Child)
+  parentId String?
+  parent   Menu?   @relation("MenuHierarchy", fields: [parentId], references: [id], onDelete: Cascade)
+  children Menu[]  @relation("MenuHierarchy")
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relasi penghubung ke hak akses peran
+  rolePermissions RolePermission[]
+
+  @@map("menus")
+}
+
+// Tabel pivot (Many-to-Many) untuk mengatur hak akses menu per Role
+model RolePermission {
+  id     String @id @default(uuid())
+  roleId String
+  role   Role   @relation(fields: [roleId], references: [id], onDelete: Cascade)
+  menuId String
+  menu   Menu   @relation(fields: [menuId], references: [id], onDelete: Cascade)
+
+  // Opsional: Izin aksi granular (Acl) jika diperlukan
+  canCreate Boolean @default(true)
+  canRead   Boolean @default(true)
+  canUpdate Boolean @default(true)
+  canDelete Boolean @default(false)
+
+  @@unique([roleId, menuId])
+  @@map("role_permissions")
 }
 
 // ==========================================
