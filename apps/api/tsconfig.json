@@ -11,11 +11,9 @@
         "rootDir": "./src"
     },
     "include": [
-        "src/**/*"
+        "src/**/*.ts"
     ],
-    "references": [
-        {
-            "path": "../../packages/database"
-        }
+    "exclude": [
+        "src/**/*.test.ts"
     ]
 }

@@ -21,11 +21,11 @@
   "engines": {
     "node": ">=20"
   },
+  "dependencies": {
+    "vercel": "^54.20.1"
+  },
   "workspaces": [
     "apps/*",
     "packages/*"
-  ],
-  "dependencies": {
-    "vercel": "^54.20.1"
-  }
+  ]
 }

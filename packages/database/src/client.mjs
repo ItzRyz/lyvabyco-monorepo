@@ -1,4 +1,4 @@
-import { PrismaClient } from '../generated/prisma/client.runtime.mjs';
+import { PrismaClient } from '@repo/db/prisma-runtime';
 import { PrismaPg } from '@prisma/adapter-pg';
 import { withAccelerate } from '@prisma/extension-accelerate';
 

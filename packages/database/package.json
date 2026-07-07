@@ -9,6 +9,10 @@
             "types": "./src/index.d.ts",
             "import": "./src/index.mjs",
             "default": "./src/index.mjs"
+        },
+        "./prisma-runtime": {
+            "import": "./generated/prisma/client.runtime.mjs",
+            "default": "./generated/prisma/client.runtime.mjs"
         }
     },
     "scripts": {
