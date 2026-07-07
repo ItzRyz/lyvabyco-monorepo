@@ -1,5 +1,12 @@
 {
     "compilerOptions": {
-        "composite": true
-    }
+        "composite": true,
+        "declaration": true,
+        "declarationMap": true,
+        "skipLibCheck": true,
+    },
+    "include": [
+        "src/**/*",
+        "prisma/**/*"
+    ]
 }

@@ -5,7 +5,7 @@
     "type": "module",
     "scripts": {
         "dev": "bun --watch src/index.ts",
-        "build": "tsc",
+        "build": "tsc --build && bun run build:dist",
         "start": "bun src/index.ts"
     },
     "dependencies": {
