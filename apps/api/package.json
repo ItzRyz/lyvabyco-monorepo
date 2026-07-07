@@ -6,8 +6,8 @@
     "scripts": {
         "dev": "bun --watch src/index.ts",
         "build": "tsc --build && bun run build:dist",
-        "build:dist": "bun build ./src/index.ts --outdir ./dist --target node",
-        "start": "bun dist/index.js"
+        "build:dist": "bun build ./src/index.ts --outdir ./api --target node",
+        "start": "bun api/index.js"
     },
     "dependencies": {
         "@repo/db": "workspace:*",

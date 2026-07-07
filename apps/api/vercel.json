@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "installCommand": "bun install",
-  "buildCommand": "bun run build",
+  "installCommand": "cd ../../ && bun install",
+  "buildCommand": "cd ../../ && bunx turbo run build --filter=api",
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/api"
+      "dest": "/api/index"
     }
   ]
 }
