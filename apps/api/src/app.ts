@@ -17,7 +17,7 @@ export function createApp() {
   app.use(cookieParser());
 
   app.get("/", (_req, res) => {
-    res.json({ message: "E-commerce API is live 🚀" });
+    res.json({ message: "gokil mas" });
   });
 
   app.all("/api/auth/*", (req, res) => {
